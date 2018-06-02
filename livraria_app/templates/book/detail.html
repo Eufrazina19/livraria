@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container-fluid">
+        <h1>{{ book.title}}</h1>
+        <!--<p>ISBN: {{ book.ISBN }}</p>-->
+        <!--<p>Category: {% for category in book.categories.all %} {{ category.name }} {% endfor %}</p>-->
+        <!--&lt;!&ndash;<p>&ndash;&gt;-->
+            <!--&lt;!&ndash;Author:&ndash;&gt;-->
+            <!--&lt;!&ndash;<a  href="{% url 'author-detail' author.pk %}">{% for author in book.authors.all %} {{ author.first_name }} {{ author.last_name }} {% endfor %}</a>&ndash;&gt;-->
+        <!--&lt;!&ndash;</p>&ndash;&gt;-->
+        <!--<p>Publisher: {{ book.publisher }}</p>-->
+        <!--<p><a href="{% url 'update-book' book.pk %}">UPDATE</a> </p>-->
+        <!--<p><a href="{% url 'delete-book' book.pk %}">Delete</a> </p>-->
+        <!--<p><a href="{% url 'book-list' %}">Books</a> </p>-->
+    </div>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container-fluid">
+        <ul>
+            {% for publisher in publisher %}
+                <li><a  href="{% url 'publisher-detail' publisher.pk %}">{{ publisher.name }}</a> </li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'create-publisher' %}">New publisher</a>
+    </div>
+{% endblock %}

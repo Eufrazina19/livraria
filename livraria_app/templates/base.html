@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %} {% endblock %}</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static '/livraria_app/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static '/livraria_app/css/custom.css' %}">
+        <link rel="stylesheet" href="{% static '/livraria_app/css/web-fonts-with-css/css/fontawesome-all.min.css' %}">
+
+        <script src="{% static 'livraria_app/js/jquery.min.js' %}"></script>
+        <script src="{% static 'livraria_app/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'livraria_app/js/bootstrap.min.js' %}"></script>
+    </head>
+
+    <body>
+
+        {% block navbar %}
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark-blue">
+                <a class="navbar-brand" href="{% url 'index' %}">
+                    <img src="{% static 'livraria_app/image/site/logo.png' %}" style="width: 60px; height: 30px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'about' %}">Sobre nós</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="{% url 'contact' %}">Contacto</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline mt-2 mt-md-0">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Títuto, Autor ou ISBN" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
+
+            <div class="nav-scroller bg-white box-shadow top">
+                <nav class="nav nav-underline">
+                    <a class="nav-link" href="#"><i class="fas fa-mobile-alt"></i> +244 926 852 456</a>
+                    <a class="nav-link" href="{% url 'publisher-list' %}">publisher list</a>
+                    <a class="nav-link" href="{% url 'book-list' %}">book list</a>
+                    <a class="nav-link" href="{% url 'author-list' %}">author list</a>
+                    <a class="nav-link" href="#"><i class="fas fa-user-circle"></i> minha conta</a>
+                    <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> carrinho
+                        <span class="badge badge-pill bg-light align-text-bottom">0</span>
+                    </a>
+                </nav>
+            </div>
+        {% endblock%} 
+
+        {% block jumbotron %}
+
+        {% endblock %} 
+
+        {% block content %}
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col-sm-2">
+                        {% block side_bar %}
+
+                        {% endblock %}
+                    </div>
+
+                    <div class="col-sm-10">
+                        {% block main_content %}
+
+                        {% endblock %}
+                    </div>
+                </div>
+            </div> 
+        {% endblock %}
+
+        {% block footer %}
+        <div class="container-fluid">
+            <footer class="footer">
+                <h2>Footer need</h2>
+            </footer>
+        </div>
+        {% endblock %} 
+    </body>
+</html>

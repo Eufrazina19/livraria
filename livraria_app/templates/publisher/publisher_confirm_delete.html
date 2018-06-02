@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container-fluid">
+        <h1>Delete Publisher</h1>
+        <p>Tens a certeza que desejas remover {{ publisher }}?</p>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <input type="submit" value="Sim. remover."/>
+        </form>
+    </div>
+{% endblock %}

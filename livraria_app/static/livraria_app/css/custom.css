@@ -1,0 +1,95 @@
+body {
+    font-family: 'Titillium Web';
+    background-color: #F8F9FA;
+    }
+
+ .navbar {
+        margin-bottom: 0;
+        background-color: #31425F;
+        z-index: 9999;
+        border: 0;
+        font-size: 12px !important;
+        line-height: 1.42857143 !important;
+        letter-spacing: 4px;
+        border-radius: 0;
+    }
+
+    .navbar li a, .navbar .navbar-brand {
+        color: #FAE600 !important;
+    }
+
+    .navbar-nav li a:hover, .navbar-nav li.active a {
+        color: #ffc300 !important;
+        background-color: #31425F !important;
+        border-bottom: 1px solid #FAE600
+    }
+
+    .navbar-default .navbar-toggle {
+        border-color: transparent;
+        color: #ffc300 !important;
+    }
+
+    .thumbnail {
+        border: 0px;
+    }
+
+    .logo {
+            font-size: 200px
+        }
+
+    .jumbotron {
+        background-color: #31425F;
+        color: fff;
+        padding: 100px 25px;
+     }
+
+    .bg-grey {
+        background-color: f6f6f6;
+    }
+
+    .container-fluid {
+        padding: 60px 50px;
+    }
+
+
+
+    @media screen and (max-width: 768px) {
+        .col-sm4- {
+            text-align: center;
+            margin: 25px 0;
+            }
+    }
+
+    footer {
+        font-size: 20px;
+        margin-bottom: 20px;
+        color: #f4511e;
+    }
+
+    .btn-outline-success {
+        color: #FAE600;
+        background-color: transparent;
+        background-image: none;
+        border-color: #FAE600;
+    }
+
+    .bg-dark-blue {
+        background-color: #31425F;
+    }
+
+    .container-fluid {
+    padding: 20px 50px;
+    }
+
+    .top {
+        margin-top: 50px;
+    }
+
+    .list-group-item {
+        background-color: #F8F9FA;
+        border: none;
+    }
+
+    .nav {
+        border-bottom: 1px solid silver;
+    }

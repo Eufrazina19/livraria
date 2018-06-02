@@ -1,0 +1,9 @@
+
+<h1>FORM</h1>
+<div>
+	<form action="get_category" method="POST">
+	{% csrf_token %}
+	{{ form }}
+	<input type="submit" name="save">
+</form>
+</div>

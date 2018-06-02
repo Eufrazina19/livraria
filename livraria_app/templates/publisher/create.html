@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block content %}
+    <div class="container-fluid">
+        <h1> New publisher </h1>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="group-form">
+                <label for="name">Name </label>
+                {% render_field form.name id="name" class="form-control" %}
+            </div>
+            <div class="group-form">
+                <label for="address">Address </label>
+                {% render_field form.address id="address" class="form-control" %}
+            </div>
+            <div class="group-form">
+                <label for="city">City </label>
+                {% render_field form.city id="city" class="form-control" %}
+            </div>
+            <div class="group-form">
+                <label for="email">E-mail </label>
+                {% render_field form.email id="email" class="form-control" placeholder="exemple@domain.com"%}
+            </div>
+
+            <br/>
+            <button type="submit" class="btn btn-success"><i class="fas fa-check"></i> Create</button>
+            <a href="{% url 'index' %}" class="btn btn-default">Cancel</a>
+        </form>
+    </div>
+{% endblock %}
